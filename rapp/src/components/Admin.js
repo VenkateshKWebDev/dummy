@@ -8,7 +8,7 @@ const Admin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:4000/api/title', { title });
+      await axios.post('http://localhost:4000/', { title });
       setMessage('Title updated successfully');
     } catch (error) {
       console.error('Error updating title:', error);
