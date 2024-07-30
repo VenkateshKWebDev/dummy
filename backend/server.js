@@ -8,7 +8,7 @@ const PORT = 4000;
 app.use(cors());
 app.use(express.json());
 
-app.get('/api/title', (req, res) => {
+app.get('/', (req, res) => {
   fs.readFile('title.json', 'utf8', (err, data) => {
     if (err) {
       return res.status(500).json({ error: 'Failed to read title' });
@@ -18,7 +18,7 @@ app.get('/api/title', (req, res) => {
   });
 });
 
-app.post('/api/title', (req, res) => {
+app.post('/', (req, res) => {
   const { title } = req.body;
   if (!title) {
     return res.status(400).json({ error: 'Title is required' });
