@@ -7,7 +7,7 @@ const Home = () => {
   useEffect(() => {
     const fetchTitle = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/api/title');
+        const response = await axios.get('https://dummy-kappa-azure.vercel.app/');
         setTitle(response.data.title);
       } catch (error) {
         console.error('Error fetching title:', error);
