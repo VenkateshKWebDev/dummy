@@ -8,7 +8,7 @@ const Admin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:4000/', { title });
+      await axios.post('https://dummy-kappa-azure.vercel.app/', { title });
       setMessage('Title updated successfully');
     } catch (error) {
       console.error('Error updating title:', error);
